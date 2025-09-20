@@ -1,0 +1,169 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    caret-color: transparent;
+}
+
+body {
+  background-color:#2e2e2e;
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  height: 100vh;            /* Full screen height */
+}
+.red {
+  color: red;
+  font-weight: bold;
+}
+.card {
+  width: 300px;
+  height: 600px;
+  text-align: center;
+  background-color:#2e2e2e;
+  color: azure;
+  padding: 20px;
+  border-radius: 16px;
+  border: 2px solid #ffffff;
+  flex-direction: column;
+}
+input {
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  border: none;
+  background-color:transparent;
+  color: white;
+  border-radius: 8px;
+  text-align:right;
+  height: 50px;
+  padding-right: 8px;
+  caret-color: auto;
+}
+.card input{
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.row button{
+  width: 60px;;
+  height: 60px;
+  font-size: 18px;
+  background-color: #2a2a2a;
+  color: white;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.2 ease;
+  display: flex;
+  align-items: center;
+  border: none;
+  justify-content: center;
+}
+.row button.btn-equal {
+  background-color: rgb(255, 123, 0);
+}
+.row button.green {
+  color: green
+}
+input::placeholder{
+color: white ;
+align-items: right;
+
+}
+input:focus {
+  background-color: #555;    /* change background */
+  border: 2px solid white;   /* show border only on focus */
+}
+h1 {
+  font-size: 25px;
+  font-weight: bold;       /* larger than 'large' */
+  color: white;
+  text-align: center;    /* centers text inside card */
+  margin-bottom: 15px;   /* spacing below heading */
+}
+/* The switch box */
+.switch {
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  position: fixed;
+  bottom: 20px;   /* distance from bottom */
+  right: 20px;    /* distance from right */
+  z-index: 999;   /* keep it above everything */
+
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider (background) */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;  /* round background */
+}
+
+/* The circle inside */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;  /* round knob */
+}
+
+/* Checked state */
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* h1 on left, toggle on right */
+  align-items: center;
+  margin-bottom: 15px;
+}
+@media (max-width: 360px) {
+  .row button {
+    width: 45px;
+    height: 45px;
+    font-size: 14px;
+    margin: 3px;
+  }
+
+  input {
+    font-size: 14px;
+    height: 38px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+}
